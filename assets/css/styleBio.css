@@ -1,0 +1,70 @@
+/* Style général info artiste.php */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3e3e3e;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style du cube pour l'image */
+.cube-container {
+    perspective: 1000px;
+    margin: 0 auto;
+}
+
+.cube {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg) rotateX(0deg);
+    transition: transform 0.5s ease;
+    border-radius: 8px; /* Coins arrondis */
+    overflow: hidden; /* Masquer les côtés supplémentaires */
+}
+
+.cube img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
+}
+
+.cube:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    transform: rotateY(90deg);
+    transition: transform 0.5s ease;
+    pointer-events: none; /* Éviter d'interférer avec les événements de la souris */
+}
+
+.cube:hover:before {
+    transform: rotateY(0deg);
+}
+
+.cube:hover {
+    transform: rotateY(180deg) rotateX(180deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Effet d'ombre  */
+}
+
