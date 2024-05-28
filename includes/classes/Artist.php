@@ -1,0 +1,34 @@
+<?php
+class Artist {
+
+private $con;
+private $id;
+
+public function __construct($con, $id) {
+	$this->con = $con;
+	$this->id = $id;
+}
+
+public function getId() {
+	return $this->id;
+}
+
+public function getName() {
+	$artistQuery = mysqli_query($this->con, "SELECT nomA FROM artists WHERE id='$this->id'");
+	$artist = mysqli_fetch_array($artistQuery);
+	return $artist['nomA'];
+}
+
+public function getSongIds() {
+	$query = mysqli_query($this->con, "SELECT id FROM musique WHERE artiste='$this->id' ORDER BY NbLecture ASC");
+
+	$array = array();
+
+	while($row = mysqli_fetch_array($query)) {
+		array_push($array, $row['id']);
+	}
+
+	return $array;
+}
+}
+?>

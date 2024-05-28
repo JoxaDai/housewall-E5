@@ -1,0 +1,69 @@
+read me -
+
+E5 ROME JOACHIM
+
+Version PHP utilisé : 8.2.0
+Wampserver 3.3.0
+PHPMyADMIN : 5.2.0
+MariaDB : 10.10.1
+
+
+
+
+Mise a jour du 22/05/24 : 
+
+Structure de la base de données
+
+Ajout des informations détaillées sur les albums:
+
+-- Année de sortie: Pour organiser la musique par période.
+--Image de couverture: Pour une présentation plus attrayante.
+--Liste des pistes: Pour afficher les chansons incluses dans chaque album.
+
+Enrichir les informations sur les artistes:
+
+
+- Date de naissance: Pour une biographie plus complète.
+- Biographie: Pour fournir des informations sur l'artiste.
+
+ Pages de réseaux sociaux: Pour une meilleure connexion avec les fans.
+- Image de profil: Pour une meilleure identification.
+
+
+Amélioration des tables "playlists" et "playlistsongs" plus flexibles:
+
+
+Ajout d'un champ "propriétaire": Pour identifier l'utilisateur qui a créé la playlist.
+Ajout d'un champ "publique/privée": Pour contrôler la visibilité des playlists.
+Ajout d'un champ "description": Pour fournir plus d'informations sur la playlist.
+
+
+Créer une table "ratings(avis) ":
+
+Utilisateur: Pour identifier l'utilisateur qui a attribué une note.
+Piste: Pour identifier la chanson notée.
+Note: Pour stocker la note attribuée.
+
+Créer une table "comments":
+Utilisateur: Pour identifier l'utilisateur qui a posté le commentaire.
+Piste: Pour identifier la chanson commentée.
+Commentaire: Pour stocker le commentaire.
+
+
+modifications apportées :
+
+Ajout d'un formulaire pour encadrer l'élément input.
+Modification de la requête SQL pour rechercher les titres et les artistes avec le terme donné.
+Correction de la variable utilisée pour les noms de colonnes dans les requêtes SQL.
+Utilisation de % pour rechercher les titres et les artistes commençant par le terme donné.
+Correction de la vérification de l'existence de résultats pour les artistes.
+Correction de l'attribut de classe dans la balise div pour les noms d'artistes.
+Utilisation de la variable $term dans le message d'absence de résultats pour les artistes.
+Ajout de la balise de fermeture </form> pour le formulaire de recherche.
+
+
+
+MODIFICATION MDP ADMINVIP : rOOt31xBa
+
+
+
